@@ -1,0 +1,471 @@
+# Complete CPEC SAINT BABETH Website
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPEC SAINT BABETH</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#f5f7fa;
+      color:#333;
+      line-height:1.6;
+    }
+
+    header{
+      background:#003366;
+      color:white;
+      padding:15px 50px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    nav h1{
+      font-size:28px;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+    }
+
+    nav ul li{
+      margin-left:25px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#00bfff;
+    }
+
+    .hero{
+      height:90vh;
+      background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero-content h2{
+      font-size:55px;
+      margin-bottom:20px;
+    }
+
+    .hero-content p{
+      font-size:22px;
+      margin-bottom:25px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 30px;
+      background:#00bfff;
+      color:white;
+      text-decoration:none;
+      border-radius:6px;
+      transition:0.3s;
+      font-size:18px;
+    }
+
+    .btn:hover{
+      background:#0099cc;
+    }
+
+    section{
+      padding:70px 50px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:40px;
+      font-size:36px;
+      color:#003366;
+    }
+
+    .about{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:40px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:10px;
+    }
+
+    .departments,
+    .workshops,
+    .partners{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:12px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+      text-align:center;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      border-radius:10px;
+      margin-bottom:15px;
+    }
+
+    .card h3{
+      color:#003366;
+      margin-bottom:15px;
+    }
+
+    .stats{
+      background:#003366;
+      color:white;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+      text-align:center;
+    }
+
+    .stat-box h2{
+      font-size:45px;
+      margin-bottom:10px;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .gallery img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+      border-radius:10px;
+    }
+
+    .contact-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:40px;
+    }
+
+    form{
+      background:white;
+      padding:25px;
+      border-radius:10px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    form input,
+    form textarea{
+      width:100%;
+      padding:12px;
+      margin-bottom:15px;
+      border:1px solid #ccc;
+      border-radius:5px;
+    }
+
+    form button{
+      width:100%;
+      padding:12px;
+      background:#003366;
+      color:white;
+      border:none;
+      border-radius:5px;
+      cursor:pointer;
+      font-size:16px;
+    }
+
+    footer{
+      background:#001f3f;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    @media(max-width:768px){
+      nav{
+        flex-direction:column;
+      }
+
+      nav ul{
+        margin-top:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .hero-content h2{
+        font-size:38px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <h1>CPEC SAINT BABETH</h1>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#departments">Departments</a></li>
+      <li><a href="#workshops">Workshops</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#partners">Partners</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h2>Welcome to CPEC SAINT BABETH</h2>
+    <p>Quality Education in General and Technical Studies</p>
+    <a href="#contact" class="btn">Apply Now</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="section-title">About Us</h2>
+
+  <div class="about">
+    <div>
+      <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop" alt="School">
+    </div>
+
+    <div>
+      <h3>Who We Are</h3>
+
+      <p>
+        CPEC SAINT BABETH is a private educational institution located in Kigali,
+        Rwanda. The school provides Ordinary Level education and technical
+        training in Software Development and Multimedia.
+      </p>
+
+      <br>
+
+      <p>
+        Our mission is to provide quality education, practical skills and modern
+        technology knowledge that prepares students for the future.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="departments">
+  <h2 class="section-title">Departments</h2>
+
+  <div class="departments">
+
+    <div class="card">
+      <h3>Software Development</h3>
+      <p>
+        Programming, Web Design, Database and Application Development.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Multimedia</h3>
+      <p>
+        Graphic Design, Video Editing, Photography and Animation.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Ordinary Level</h3>
+      <p>
+        General education for S1, S2 and S3 students.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="workshops">
+  <h2 class="section-title">Our Workshops</h2>
+
+  <div class="workshops">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="Software Workshop">
+
+      <h3>Software Development Workshop</h3>
+
+      <p>
+        Students practice programming, website development, mobile application
+        development and database management using modern computers.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Multimedia Workshop">
+
+      <h3>Multimedia Workshop</h3>
+
+      <p>
+        Students gain practical skills in graphic design, video editing,
+        photography and animation using multimedia tools.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="stats">
+
+  <div class="stat-box">
+    <h2>280+</h2>
+    <p>Students</p>
+  </div>
+
+  <div class="stat-box">
+    <h2>20+</h2>
+    <p>Teachers</p>
+  </div>
+
+  <div class="stat-box">
+    <h2>2</h2>
+    <p>Workshops</p>
+  </div>
+
+  <div class="stat-box">
+    <h2>3+</h2>
+    <p>Years Experience</p>
+  </div>
+
+</section>
+
+<section id="gallery">
+  <h2 class="section-title">School Gallery</h2>
+
+  <div class="gallery">
+
+    <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1200&auto=format&fit=crop" alt="Students">
+
+    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200&auto=format&fit=crop" alt="Classroom">
+
+    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200&auto=format&fit=crop" alt="Workshop">
+
+  </div>
+</section>
+
+<section id="partners">
+  <h2 class="section-title">Our Partners</h2>
+
+  <div class="partners">
+
+    <div class="card">
+      <h3>Madame Babeth</h3>
+      <p>
+        Collaboration with technology institutions to improve students practical skills.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Goverment of Rwanda</h3>
+      <p>
+        Working with education organizations to provide quality learning opportunities.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Byumba catholic</h3>
+      <p>
+        Partnerships with companies for internship and career opportunities.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Contact Us</h2>
+
+  <div class="contact-container">
+
+    <div>
+      <h3>Get In Touch</h3>
+      <br>
+      <p><strong>Location:</strong> Kigali, Rwanda</p>
+      <p><strong>Email:</strong> info@cpecsaintbabeth.com</p>
+      <p><strong>Phone:</strong> +250 788 000 000</p>
+    </div>
+
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+
+      <input type="email" id="email" placeholder="Your Email" required>
+
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send Message</button>
+
+      <p id="response"></p>
+    </form>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 CPEC SAINT BABETH | All Rights Reserved</p>
+</footer>
+
+<script>
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    document.getElementById('response').innerHTML =
+      'Message sent successfully!';
+
+    form.reset();
+  });
+</script>
+
+</body>
+</html>
+```
